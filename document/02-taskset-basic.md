@@ -5,7 +5,7 @@ Locust version: 0.8.1
 
 ## Create Task file
 
-Create a file named `sample_code/02-taskset.py` (this specific name not any others)
+Create a file named `sample_code/02-taskset-basic.py` (this specific name not any others)
 
 ```python
 from locust import HttpLocust, TaskSet
@@ -53,11 +53,11 @@ class MobileUser(HttpLocust):
 
 ## Run
 
-Run all task sets in file `locust -f sample_code/02-taskset.py --host=https://www.facebook.com`
+Run all task sets in file `locust -f sample_code/02-taskset-basic.py --host=https://www.facebook.com`
 
-Run a specific task set in file `locust -f sample_code/02-taskset.py --host=https://www.facebook.com WebsiteUser`
+Run a specific task set in file `locust -f sample_code/02-taskset-basic.py --host=https://www.facebook.com WebsiteUser`
 
-Run some specific task sets (not all) in file `locust -f sample_code/02-taskset.py --host=https://www.facebook.com MobileUser MobileUser2 MobileUser3`
+Run some specific task sets (not all) in file `locust -f sample_code/02-taskset-basic.py --host=https://www.facebook.com MobileUser MobileUser2 MobileUser3`
 
 ## Notes
 
