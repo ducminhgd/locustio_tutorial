@@ -5,7 +5,7 @@ Locust version: 0.8.1
 
 ## Create Task file
 
-Create a file named `tutorial/locustfile.py` (this specific name not any others)
+Create a file named `sample_code/locustfile.py` (this specific name not any others)
 
 ```python
 from locust import HttpLocust, TaskSet
@@ -17,10 +17,7 @@ def profile(l):
     l.client.get("/ducminhgd")
 
 class UserBehavior(TaskSet):
-    tasks = {
-        index: 2,
-        profile: 1,
-    }
+    pass
 
 class WebsiteUser(HttpLocust):
     task_set = UserBehavior
@@ -30,7 +27,7 @@ class WebsiteUser(HttpLocust):
 
 ## Run
 
-Change working directory to `tutorial` and run this command `locust --host=https://github.com`
+Change working directory to `sample_code` and run this command `locust --host=https://github.com`
 
 Output should be like (I used vagrant):
 
@@ -41,3 +38,8 @@ Output should be like (I used vagrant):
 
 If you run with localhost, then open the page `http://127.0.0.1:8089`, input values for `Number of users to simulate` and `Hatch rate` then start swarming and view results.
 
+## Notes
+
+Since for this tutorial, I use `sample_code/01-hello-locust.py`, then the run command should be `locust -f sample_code/01-hello-locust.py`
+
+`-f` option is for the file path.

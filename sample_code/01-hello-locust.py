@@ -1,16 +1,17 @@
 from locust import HttpLocust, TaskSet
 
+
 def index(l):
     l.client.get("/")
+
 
 def profile(l):
     l.client.get("/ducminhgd")
 
+
 class UserBehavior(TaskSet):
-    tasks = {
-        index: 2,
-        profile: 1,
-    }
+    pass
+
 
 class WebsiteUser(HttpLocust):
     task_set = UserBehavior

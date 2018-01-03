@@ -100,7 +100,5 @@ ENV/
 # mypy
 .mypy_cache/
 
-.venv
-.idea
 .vscode
 .idea
